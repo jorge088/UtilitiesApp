@@ -1,7 +1,7 @@
 .weatherApp{
     font-size: 16px;
     position: relative;
-    margin: 1em auto;
+    margin: 0 auto;
     width: 350px;
     height: 500px;
     padding: 1.5em;
@@ -9,6 +9,7 @@
     flex-direction: column;
     background-color: #ff9800;
     border-radius: 16px;
+    transition: .8s ease all;
     
     img{
         position: absolute;
@@ -24,6 +25,16 @@
     app-detail{
         z-index: 20;
     }
+}
+.content{
+    padding: 1em 0;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,.3);
+    background-blend-mode:soft-light;
+    min-height: 100%;
+    transition: .8s ease all;
 }
 @media only screen and (max-width:575px) {
     .weatherApp{

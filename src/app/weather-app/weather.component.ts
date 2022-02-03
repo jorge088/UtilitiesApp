@@ -11,6 +11,8 @@ export class WeatherComponent implements OnInit {
 
   weatherInfo:any=[];
   city:string = "San salvador de Jujuy";
+  appBackColor:string="";
+  appImage:string="";
 
   constructor( private weather:WeatherService ) { 
     
@@ -25,7 +27,19 @@ export class WeatherComponent implements OnInit {
       this.weatherInfo.main.temp = String(parseInt(this.weatherInfo.main.temp) - 273);
       this.weatherInfo.main.temp_max = String(parseInt(this.weatherInfo.main.temp_max)-273);
       this.weatherInfo.main.temp_min = String(parseInt(this.weatherInfo.main.temp_min)-273);
+      setTimeout(()=>{
+        this.getStyle(this.weatherInfo);
+      },500); 
     });
+  }
+  getStyle(data:any){
+    if(parseInt(data.main.temp)<18){
+      this.appBackColor="#3053AE";
+      this.appImage="url('../../assets/cold.jpg')";
+    }else if(parseInt(data.main.temp)>=18){
+      this.appBackColor="#ff9800";
+      this.appImage="url('../../assets/warm.jpg')";
+    }
   }
   getCurrentPosition(){
     setTimeout(()=>{
