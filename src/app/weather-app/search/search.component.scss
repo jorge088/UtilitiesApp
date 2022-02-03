@@ -1,6 +1,8 @@
 form{
     width: 100%;
     .searchBox{
+        position: relative;
+        text-align: center;
         .bx-search{
             position: relative;
             left: 32px;
@@ -11,12 +13,13 @@ form{
             cursor: pointer;
         }
         input{
-            height: 40px;
-            width: 90%;
+            height: 35px;
+            width: 85%;
             padding-left: 35px;
+            font-weight: 700;
             font-size: 1.1em;
             border-radius: 12px;
-            background-color: rgb(240,240,240,0.24);
+            background-color: rgb(240,240,240,0.35);
             color: #FFF;
             border-style: none;
             outline: none;
@@ -24,6 +27,17 @@ form{
                 color: #FFF;
                 font-size: 1em;
             }
+        }
+        .error{
+            position: absolute;
+            width: max-content;
+            left: 0;
+            top: 40px;
+            margin-left: 50px;
+            padding: 0 5px;
+            border-radius: 10px;
+            color: #f2f2f2;
+            background-color: rgb(224,80,80,.5);
         }
     }
 }

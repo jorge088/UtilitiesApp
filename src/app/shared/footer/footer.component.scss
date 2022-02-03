@@ -18,7 +18,7 @@
                 text-decoration: none;
                 color: #FFF;
                 & i{
-                    font-size: 2.6em;
+                    font-size: 2.5em;
                     padding: .1em .3em;
                     transition: .3s ease all;
                     &.instagram{
@@ -29,8 +29,7 @@
                     }
                     &.linkedin{
                         &:hover{
-                            color: #0E76A8;
-                            filter: drop-shadow(1px 1px 2px #FFF);                        
+                            filter: drop-shadow(1px 1px 1px #FFF);                        
                         }
                     }
                     &.github{
