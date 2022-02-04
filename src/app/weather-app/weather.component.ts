@@ -29,7 +29,7 @@ export class WeatherComponent implements OnInit {
       this.weatherInfo.main.temp_min = String(parseInt(this.weatherInfo.main.temp_min)-273);
       setTimeout(()=>{
         this.getStyle(this.weatherInfo);
-      },500); 
+      },100); 
     });
   }
   getStyle(data:any){
