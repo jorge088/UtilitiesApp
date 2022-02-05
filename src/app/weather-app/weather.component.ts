@@ -12,8 +12,8 @@ export class WeatherComponent implements OnInit {
   weatherInfo:any=[];
   city:string = "San salvador de Jujuy";
   appBackColor:string="";
-  @HostBinding('class.backgroundImgHot')  hotWeather = false;
-  @HostBinding('class.backgroundImgCold')  coldWeather = false;
+  @HostBinding('style.background-color')  color !: string;
+  //@HostBinding('class.backgroundImgCold')  coldWeather = false;
 
   constructor( private weather:WeatherService ) { 
   }
@@ -35,12 +35,10 @@ export class WeatherComponent implements OnInit {
   getStyle(data:any){
     if(parseInt(data.main.temp)<16){
       this.appBackColor="#3053AE";
-      this.hotWeather=false;
-      this.coldWeather=true;
+      this.color="blue";
     }else if(parseInt(data.main.temp)>=16){
       this.appBackColor="#ff9800";
-      this.coldWeather=false;
-      this.hotWeather=true;
+      this.color="red"
     } 
   }
   getCurrentPosition(){
