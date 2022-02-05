@@ -1,8 +1,22 @@
-
-.weatherApp{
+:host {
+    display: block;
+    margin: 0;
+    padding: 1em 0;
+    height: calc(100vh - 118px);
+    background-size:cover;
+    background-position:center;
+    // background-image: url("../../assets/warm.jpg");
+    &.backgroundImgHot{
+        background-image: url('../../assets/warm.jpg');
+    }
+    &.backgroundImgCold{
+        background-image: url('../../assets/cold.jpg');
+    }
+}
+.weatherApp {
     font-size: 16px;
     position: relative;
-    margin: 0 auto;
+    margin:  0 auto;
     width: 350px;
     height: 500px;
     padding: 1.5em;
@@ -27,14 +41,11 @@
         z-index: 20;
     }
 }
-.content{
-    padding: 1em 0;
-    margin: 0;
-    background-size: cover;
-    background-position:center;
-    height: 100%;
-}
+
 @media only screen and (max-width:575px) {
+    :host{
+        height: calc(100vh - 115px);
+    }
     .weatherApp{
         width: 340px;
         font-size: 15px;

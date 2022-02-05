@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 import { WeatherService } from './weather.service'; //import the weather service
 
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.scss']
+  styleUrls: ['./weather.component.scss'],
 })
 export class WeatherComponent implements OnInit {
 
   weatherInfo:any=[];
   city:string = "San salvador de Jujuy";
   appBackColor:string="";
-  appImage:string="";
+  @HostBinding('class.backgroundImgHot')  hotWeather = false;
+  @HostBinding('class.backgroundImgCold')  coldWeather = false;
 
   constructor( private weather:WeatherService ) { 
-    
   }
 
   ngOnInit(): void {
@@ -33,13 +33,15 @@ export class WeatherComponent implements OnInit {
     });
   }
   getStyle(data:any){
-    if(parseInt(data.main.temp)<18){
+    if(parseInt(data.main.temp)<16){
       this.appBackColor="#3053AE";
-      this.appImage="url('../../assets/cold.jpg')";
-    }else if(parseInt(data.main.temp)>=18){
+      this.hotWeather=false;
+      this.coldWeather=true;
+    }else if(parseInt(data.main.temp)>=16){
       this.appBackColor="#ff9800";
-      this.appImage="url('../../assets/warm.jpg')";
-    }
+      this.coldWeather=false;
+      this.hotWeather=true;
+    } 
   }
   getCurrentPosition(){
     setTimeout(()=>{

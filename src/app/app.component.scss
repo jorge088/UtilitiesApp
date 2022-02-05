@@ -1,5 +1,6 @@
 .contain{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    justify-content: space-between;
 }
