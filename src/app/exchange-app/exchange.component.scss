@@ -2,7 +2,7 @@
     display: block;
     margin: 0;
     padding: 3em 0;
-    height: calc(100vh - 118px);
+    min-height: calc(100vh - 119px);
     background-size:cover;
     background-position:center;
     background-image: url(../../assets/exchangebg.jpeg);
@@ -18,7 +18,7 @@
 }  
 @media only screen and (max-width:575px) {
     :host{
-        height: calc(100vh - 115px);
+        min-height: calc(100vh - 115px);
     }
     .exchangeApp{
         width: 340px;
