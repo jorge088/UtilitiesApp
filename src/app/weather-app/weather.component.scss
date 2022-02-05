@@ -5,11 +5,11 @@
     justify-content: center;
     padding: 2em 1em;
     background: rgba(0, 0, 0, 0.1);
-    background-position: center;
-    background-size: cover;
-    background-image: url('../../assets/warm.jpg');
-    background-image: url('../../assets/cold.jpg');
-    // background-image: radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%);
+    // background-position: center;
+    // background-size: cover;
+    // background-image: url('../../assets/warm.jpg');
+    // background-image: url('../../assets/cold.jpg');
+    background-image: radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%);
     // background-image: radial-gradient(circle farthest-side, #81c9fa 30%,#2196f3 100%);
     // background-blend-mode:exclusion ;
 }
@@ -21,7 +21,7 @@
     padding: 1.5em;
     display: flex;
     flex-direction: column;
-    // background: linear-gradient(120deg, #ffde08 8%,#fcc632 30%, #ffae41 100%);
+    background: linear-gradient(120deg, #ffde08 8%,#fcc632 30%, #ffae41 100%);
     // background: linear-gradient(120deg, #3dc9f2 8%, #00a7dc 30%,#00a7dc 70%, #0199d2 90%);
     box-shadow: 4px 6px 8px 6px rgba(0, 0, 0, 0.18);
     img{
