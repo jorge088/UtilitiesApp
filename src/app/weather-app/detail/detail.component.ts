@@ -8,12 +8,6 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class DetailComponent implements OnInit {
   @Input() weatherInfo:any;
   constructor() { }
-  // temp_min:string="";
-  // temp_max:string="";
-  // winterSpeed:string="";
-  // cloudsPerc:string="";
-  // humidity:string="";
-  // pressure:string="";
   ngOnInit(): void {
     
   }

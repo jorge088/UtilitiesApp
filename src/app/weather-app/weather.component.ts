@@ -12,7 +12,8 @@ export class WeatherComponent implements OnInit {
 
   city:string = "cordoba";
   appBackColor:string="linear-gradient(120deg, #ffde08 8%,#fcc632 30%, #ffae41 100%)";
-  @HostBinding('style.background-image')  image : string ="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
+  //@HostBinding('style.background-image')  image : string ="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
+  @HostBinding('style.background-image')  image : string ="url('../../assets/warm.jpg')";
 
   constructor( private weather:WeatherService ) { 
   }
@@ -52,10 +53,12 @@ export class WeatherComponent implements OnInit {
   getStyle(){
     if(parseInt(this.weatherInfo.main.temp)<16){
       this.appBackColor="linear-gradient(120deg, #3dc9f2 8%, #00a7dc 30%,#00a7dc 70%, #0199d2 90%)";
-      this.image="radial-gradient(circle farthest-side, #81c9fa 30%,#2196f3 100%)";
+      //this.image = "radial-gradient(circle farthest-side, #81c9fa 30%,#2196f3 100%)";
+      this.image = "url('../../assets/cold.jpg')";
     }else if(parseInt(this.weatherInfo.main.temp)>=16){
       this.appBackColor="linear-gradient(120deg, #ffde08 8%,#fcc632 30%, #ffae41 100%)";
-      this.image="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
+      //this.image="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
+      this.image="url('../../assets/warm.jpg')"
     }
     console.log(this.weatherInfo);
   }
