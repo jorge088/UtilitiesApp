@@ -1,31 +1,31 @@
 <div class="details">
-    <p class="details__minmax">{{weatherInfo.main.temp_min}}°C min - {{weatherInfo.main.temp_max}}°C max</p>
+    <p class="details__minmax">{{this.weatherInfo.main.temp_min}}°C min - {{this.weatherInfo.main.temp_max}}°C max</p>
     <div class="details__wind detail">
         <div class="icon">
             <p class="info">Winter speed</p>
             <i class='bx bx-wind'></i>
         </div>
-        <p class="details__wind__detail">{{weatherInfo.wind.speed}} m/s</p>
+        <p class="details__wind__detail">{{this.weatherInfo.windSpeed}} m/s</p>
     </div>
     <div class="details__clouds detail">
         <div class="icon">
             <p class="info">Cloudiness</p>
             <i class='bx bx-cloud' ></i>
         </div>
-        <p class="details__clouds__detail">{{weatherInfo.clouds.all}} %</p>
+        <p class="details__clouds__detail">{{this.weatherInfo.cloudsPerc}} %</p>
     </div>
     <div class="details__humidity detail">
         <div class="icon">
             <p class="info">Humidity</p>
             <i class='bx bx-water'></i>
         </div>
-        <p class="details__humidity__detail">{{weatherInfo.main.humidity}} %</p>
+        <p class="details__humidity__detail">{{this.weatherInfo.main.humidity}} %</p>
     </div>
     <div class="details__pressure detail">
         <div class="icon">
             <p class="info">Pressure</p>
             <i class='bx bx-tachometer'></i>
         </div>
-        <p class="details__pressure__detail">{{weatherInfo.main.pressure}} hPa</p>
+        <p class="details__pressure__detail">{{this.weatherInfo.main.pressure}} hPa</p>
     </div>
 </div>

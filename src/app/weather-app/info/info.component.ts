@@ -6,11 +6,17 @@ import { Component, OnInit, AfterViewInit , Input } from '@angular/core';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent {
-  @Input() weatherInfo:any=[];
-  
+  @Input() weatherInfo:any;
+  city:string="";
+  temp:string="";
   constructor() { }
 
   ngOnInit(): void {    
+    
+
+    
+  }
+  setValues(){  
   }
 
   ngAfterViewInit():void{

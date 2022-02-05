@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   searchForm = new FormGroup({
     search: new FormControl("",[Validators.pattern("[a-zA-Z]*")])//only allow characters
   });
+  
   get f(){return this.searchForm.controls}
 
   getSearch(){

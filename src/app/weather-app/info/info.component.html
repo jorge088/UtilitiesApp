@@ -1,7 +1,7 @@
 <div class="mainInfo">
-    <p class="mainInfo__city">{{weatherInfo.name}} - {{weatherInfo.sys.country}}</p>
+    <p class="mainInfo__city">{{this.weatherInfo.name}} - {{this.weatherInfo.country}}</p>
     <div class="mainInfo__celsius-container">
-        <p class="mainInfo__celsius-container__number">{{weatherInfo.main.temp}}</p>
+        <p class="mainInfo__celsius-container__number">{{this.weatherInfo.main.temp}}</p>
         <p class="mainInfo__celsius-container__celsius">°C</p>
     </div>
 </div>
