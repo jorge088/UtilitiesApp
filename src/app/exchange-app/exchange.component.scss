@@ -1,0 +1,23 @@
+.contain{
+    padding: 5em 0;
+    margin: 0;
+    height: 100%;
+    background-image: url(../../assets/exchangebg.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.exchangeApp{
+    font-size: 16px;
+    position: relative;
+    margin: 0 auto;
+    padding: 2.5em 1.5em;
+    width: 450px;
+    border-radius: 15px;
+    background-color: #009929;
+}  
+@media only screen and (max-width:575px) {
+    .exchangeApp{
+        width: 340px;
+        font-size: 16px;
+    }
+}

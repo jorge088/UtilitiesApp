@@ -8,6 +8,7 @@ import { ExchangeService } from './exchange.service';
 })
 export class ExchangeComponent implements OnInit {
   dollarInfo:any=[];
+  
   constructor(private exchange:ExchangeService) { }
 
   ngOnInit(): void {

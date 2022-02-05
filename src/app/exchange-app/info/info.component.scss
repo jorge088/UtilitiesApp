@@ -1,0 +1,33 @@
+.mainInfo{
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+    h1{
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 1.5em;
+        margin: .4em 0;
+    }
+    .currencyInfo{
+        &__date{
+            font-size: 1.1em;     
+        }
+        &__dollarQuote{
+            font-weight: 800;
+            font-size: 1.1em;
+            margin: .5em 0;
+            padding: .3em;
+            border: 1px solid #fff;
+            border-style:dashed;
+            display: inline-block;
+        }
+
+    }
+}
+@media only screen and (max-width:575px) {
+    .mainInfo{
+        font-size: 15px;
+    }
+}
