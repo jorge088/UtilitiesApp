@@ -1,4 +1,4 @@
-<div [style.background-color]="appBackColor" class="weatherApp">
+<div [style.background]="appBackColor" class="weatherApp">
     <img src="./../../assets/bgImage.svg" alt="Image of weather">
     <app-search (searchValue)="getWeatherInfo($event)"></app-search>
     <app-info [weatherInfo]="weatherInfo"></app-info>

@@ -28,7 +28,7 @@ export class WeatherComponent implements OnInit {
       this.weatherInfo.main.temp_max = String(parseInt(this.weatherInfo.main.temp_max)-273);
       this.weatherInfo.main.temp_min = String(parseInt(this.weatherInfo.main.temp_min)-273);
       setTimeout(()=>{
-        this.getStyle(this.weatherInfo);
+       this.getStyle(this.weatherInfo);
       },300); 
     });
     
@@ -36,11 +36,11 @@ export class WeatherComponent implements OnInit {
 
   getStyle(data:any){
     if(parseInt(data.main.temp)<16){
-      this.appBackColor="#3053AE";
-      this.image="url('../../assets/cold.jpg')";
+      this.appBackColor="linear-gradient(120deg, #3dc9f2 8%, #00a7dc 30%,#00a7dc 70%, #0199d2 90%)";
+      this.image="radial-gradient(circle farthest-side, #81c9fa 30%,#2196f3 100%)";
     }else if(parseInt(data.main.temp)>=16){
-      this.appBackColor="#ff9800";
-      this.image="url('../../assets/warm.jpg')";
+      this.appBackColor="linear-gradient(120deg, #fddd11 8%,#fcc632 30%, #ffae41 100%)";
+      this.image="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
     } 
   }
   getCurrentPosition(){
