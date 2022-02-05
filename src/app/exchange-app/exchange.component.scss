@@ -1,9 +1,11 @@
 :host{
+    min-height: calc(100vh - 120px);
+    padding: 2em 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em 1em;
-    min-height: calc(100vh - 120px);
+    background: rgba(0, 0, 0, 0.137);
+    background-blend-mode: soft-light ;
     background-size:cover;
     background-position:center;
     background-image: url('../../assets/exchangebg.jpeg');
