@@ -22,7 +22,7 @@ export class WeatherComponent implements OnInit {
     this.weatherInfo={
       main:{}
     };
-    // this.getCurrentPosition();
+    this.getCurrentPosition();
     
   }
 
@@ -60,7 +60,6 @@ export class WeatherComponent implements OnInit {
       this.image="radial-gradient(circle farthest-side, #ffd06b 30%,#ffbd30 100%)";
       // this.image="url('../../assets/warm.jpg')"
     }
-    console.log(this.weatherInfo);
   }
  
 

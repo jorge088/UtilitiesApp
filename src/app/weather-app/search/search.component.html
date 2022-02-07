@@ -1,6 +1,14 @@
-<form >
-    <div [formGroup]="searchForm" class="searchBox">
+<form [formGroup]="searchForm">
+    <div  class="searchBox">
         <i (click)="getSearch()"  class='bx bx-search'></i>
-        <input name="search" formControlName="search" type="text" placeholder="City" (keydown.enter)="onEnter($event)">    
+        <input 
+        name="search" 
+        formControlName="searchCity" 
+        type="text" 
+        [class.errorInput]="city?.invalid && city?.touched"
+        placeholder="City" 
+        (keydown.enter)="onEnter($event)">
+        <span class="error" *ngIf="city?.invalid && city?.touched"
+        >Incorrect format</span>
     </div>
 </form>

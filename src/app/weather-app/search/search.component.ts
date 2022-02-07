@@ -12,17 +12,30 @@ export class SearchComponent implements OnInit {
   @Output() searchValue: EventEmitter<string> = new EventEmitter();
 
   searchForm = new FormGroup({
-    search: new FormControl("",[Validators.pattern("[a-zA-Z]*")])//only allow characters
+    searchCity: new FormControl('',
+    [
+    Validators.pattern("[a-zA-Z]*"), //only allow characters
+    Validators.required
+    ])
   });
   
-  get f(){return this.searchForm.controls}
 
   getSearch(){
-    this.searchValue.emit((this.searchForm.value).search);
+    // console.log("validez:" + this.searchForm.valid);
+    if( this.searchForm.valid){
+      this.searchValue.emit((this.searchForm.value).search); 
+    }
   }
+
   onEnter(evt:any){
-    evt.preventDefault();
-    this.searchValue.emit(evt.target.value);
+    // console.log("validez:" + this.searchForm.valid);
+    if(this.searchForm.valid){
+      this.searchValue.emit(evt.target.value);
+    }
+  }
+
+  get city(){
+    return this.searchForm.get('searchCity');
   }
   constructor() { }
 
