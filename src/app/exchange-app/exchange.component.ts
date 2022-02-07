@@ -17,9 +17,16 @@ export class ExchangeComponent implements OnInit {
 
   getDollarInfo(){
     this.exchange.getFromApi().subscribe(data=>{
-      this.dollarInfo=data;
-      console.log(this.dollarInfo);
+      setTimeout(() => {
+        this.setDollarInfo(data);
+      }, 500);
+      let date = new Date("2022-02-08");
     });
+  }
+  setDollarInfo(data:any){
+    this.dollarInfo=data;
+    console.log(this.dollarInfo);
+    this.dollarInfo.fecha=this.dollarInfo.fecha.slice(0,10);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-converter',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./converter.component.scss']
 })
 export class ConverterComponent implements OnInit {
+
+  @Input() dollarInfo:any;
 
   constructor() { }
 
