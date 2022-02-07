@@ -4,19 +4,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.137);
-    background-blend-mode: soft-light ;
-    background-image: radial-gradient(circle farthest-side, #464646 30%,#2a2a2b 100%);
 }
 .exchangeApp{
     font-size: 16px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 2.5em 1.5em;
-    width: 450px;
-    border-radius: 8px;
-    background-blend-mode:saturation ;
-    box-shadow: 4px 6px 6px 5px rgba(255, 255, 255, 0.15);
-    background: linear-gradient(to bottom, #35c727 30%, #15b923 50%);
+    width: 400px;
+    min-height: 350px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.1);
+
+    background-blend-mode:soft-light ;
+    box-shadow: 4px 6px 6px 5px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(120deg, #1b7cd1 50%, #1370c2 80%);
 
 }  
 @media only screen and (max-width:575px) {
