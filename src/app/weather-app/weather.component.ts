@@ -22,7 +22,7 @@ export class WeatherComponent implements OnInit {
     this.weatherInfo={
       main:{}
     };
-    this.getCurrentPosition();
+    // this.getCurrentPosition();
     
   }
 
@@ -35,7 +35,7 @@ export class WeatherComponent implements OnInit {
       setTimeout(() => {
         this.setWeatherData(data);
         this.getStyle();
-      }, 1000);
+      }, 500);
     }); 
     
   }
