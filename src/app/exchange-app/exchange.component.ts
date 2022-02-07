@@ -25,7 +25,6 @@ export class ExchangeComponent implements OnInit {
   }
   setDollarInfo(data:any){
     this.dollarInfo=data;
-    console.log(this.dollarInfo);
     this.dollarInfo.fecha=this.dollarInfo.fecha.slice(0,10);
   }
 

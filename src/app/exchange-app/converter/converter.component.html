@@ -1,23 +1,31 @@
-
-<div class="currencyConverter">
+<form [formGroup]="converterCalc" class="currencyConverter">
     <div class="currencyConverter__coin">
-        <form >
-            <label for="">Dollar</label>
-            <input type="number" placeholder="0">
-        </form>
+        <label for="">Dollar</label>
+        <input 
+        type="number" 
+        placeholder="0"
+        formControlName="dollarAmount"
+        [value]="dollarAmountConverted"
+        (input)="convertDollarToArg()"
+        (keydown.enter)="onEnter($event)" >
     </div>
     <div class="currencyConverter__exchange">
-        <i class='bx bx-transfer'></i>
+        <i  class='bx bx-transfer'></i>
     </div>
     <div class="currencyConverter__coin">
-        <form >
-            <label for="">AR Peso</label>
-            <input type="number" placeholder="0">
-        </form>
+        <label for="">AR Peso</label>
+        <input 
+        type="number" 
+        placeholder="0"
+        (keydown.enter)="onEnter($event)"
+        [value]="argsAmountConverted"
+        (input)="convertArgToDollar()"
+        formControlName="argAmount">
     </div>
-</div> 
+</form>
+
 <div class="currencyConverted">
-    <p class="currencyConverted__coin">$ 0 USD </p>
+    <p class="currencyConverted__coin">$ {{dollarAmountConverted.toLocaleString()}} USD </p>
     <p class="currencyConverted__sign">=</p>
-    <p class="currencyConverted__coin">$ 0 ARS</p>
+    <p class="currencyConverted__coin">$ {{argsAmountConverted.toLocaleString()}} ARS</p>
 </div>

@@ -7,6 +7,7 @@ import { InfoComponent } from './info/info.component';
 import { ConverterComponent } from './converter/converter.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     ExchangeComponent

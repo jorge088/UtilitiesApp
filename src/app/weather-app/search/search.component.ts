@@ -29,6 +29,7 @@ export class SearchComponent implements OnInit {
 
   onEnter(evt:any){
     // console.log("validez:" + this.searchForm.valid);
+    evt.preventDefault();
     if(this.searchForm.valid){
       this.searchValue.emit(evt.target.value);
     }
