@@ -56,6 +56,7 @@ export class ConverterComponent implements OnInit {
       this.argsAmountConverted = (this.converterCalc.value).argAmount;
       this.argsAmountConverted= parseFloat(this.argsAmountConverted.toFixed(2));
 
+
     }else{  //input empty, set to 0 de amounts
       this.argsAmountConverted=0;
       this.dollarAmountConverted=0;
