@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { WeatherAppModule } from './weather-app/weather-app.module';
 import { ExchangeAppModule } from './exchange-app/exchange-app.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
